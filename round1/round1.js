@@ -64,9 +64,9 @@ if (1) {
 
 if (1) {
     console.log("=== 꼬리물기 최적화 재귀 ver ===");
-    const _sum = (index, acc) => index > 0 ? _sum(index - 1, acc + array[index]) : array[0] + acc;
-    const sum = index => _sum(index, 0);
-    let result = sum(array.length - 1);
+    const _sum = (arr, index, acc) => index > 0 ? _sum(arr, index - 1, acc + arr[index]) : arr[0] + acc;
+    const sum = arr => _sum(arr, arr.length - 1, 0);
+    let result = sum(array);
     console.log("result: ", result);
 }
 
