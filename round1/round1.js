@@ -72,11 +72,12 @@ if (1) {
 
 if (1) {
     console.log("=== 꼬리물기 최적화 재귀를 for 문으로 ===");
-    const index = array.length - 1;
+    const arr = array;
+    const index = arr.length - 1;
     let acc = 0;
     for (let i = index; i > 0; i--) {
-        acc += array[i];
+        acc += arr[i];
     }
-    acc += array[0];
+    acc += arr[0];
     console.log("acc: ", acc);
 }
