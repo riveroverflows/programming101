@@ -56,8 +56,9 @@ if (1) {
     // 0~8 + 9
     // 0~7 + 8 + 9
     // 0~6 + 7 + 8 + 9
-    const sum = (index) => index > 0 ? array[index] + sum(index - 1) : array[0];
-    let result = sum(array.length - 1);
+    const _sum = (arr, index) => index > 0 ? arr[index] + _sum(arr, index - 1) : arr[0];
+    const sum = arr => _sum(arr, arr.length - 1);
+    let result = sum(array);
     console.log("result: ", result);
 }
 
